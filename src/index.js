@@ -10,11 +10,8 @@ button.addEventListener('click', loadOnClick);
 search.addEventListener('keypress', loadInputValue);
 
 function parseData(data) {
-  console.log(data);
-  const rez = imgTemplate(data);
-  container.innerHTML += rez;
-  button.removeAttribute('disabled');
-  let images = 0;
+  const containerPoint = imgTemplate(data);
+  container.innerHTML += containerPoint;
 }
 
 function loadOnClick(event) {
@@ -23,9 +20,8 @@ function loadOnClick(event) {
 
 function loadInputValue(event) {
   if (event.key === 'Enter') {
-    console.log('GO AWAY');
+    event.preventDefault();
+    container.innerHTML = '';
     loadOnClick(event);
   }
 }
-
-// pixApi(search.value, ++currentPage, parseData);

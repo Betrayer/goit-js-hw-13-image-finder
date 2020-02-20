@@ -6,6 +6,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,4 +19,37 @@ body {
    * CSS image reference example.
    */
   background-image: url('./images/bg-pattern.png');
+}
+
+form {
+  height: 25px;
+  display: block;
+}
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  width: 640px;
+}
+
+img {
+  width: 640px;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* width: 640px; */
+}
+
+.container {
+  width: 100vw;
 }
